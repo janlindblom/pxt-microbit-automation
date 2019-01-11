@@ -41,14 +41,15 @@ namespace automation {
     export class BehaviorManager {
         private _behaviors: Behavior[];
         private _state: BehaviorManagerState;
-        private _timer: control.Timer;
+        // TODO: Find a way to make a timer.
+        //private _timer: control.Timer;
 
         public timestep: number;
 
         constructor() {
             this._behaviors = [];
             this._state = BehaviorManagerState.Stopped;
-            this._timer = new control.Timer();
+            //this._timer = new control.Timer();
             this.timestep = 20;
         }
 
@@ -71,7 +72,7 @@ namespace automation {
         start(): void {
             if (this._state == BehaviorManagerState.Running) return;
             this._state = BehaviorManagerState.Running;
-            control.runInParallel(() => this.run());
+            //control.runInParallel(() => this.run());
         }
 
         /**
@@ -79,7 +80,7 @@ namespace automation {
          */
         stop(): void {
             this._state = BehaviorManagerState.StopPending;
-            pauseUntil(() => this._state == BehaviorManagerState.Stopped);
+            //pauseUntil(() => this._state == BehaviorManagerState.Stopped);
         }
 
         private run() {
@@ -106,9 +107,9 @@ namespace automation {
                 }
 
                 // give a breather to the events
-                this._timer.pauseUntil(this.timestep);
-                elapsed = this._timer.millis();
-                this._timer.reset();
+                //this._timer.pauseUntil(this.timestep);
+                //elapsed = this._timer.millis();
+                //this._timer.reset();
             }
 
             // tell manager that we are done
@@ -122,11 +123,11 @@ namespace automation {
                 this._behaviors[j].active = false;
             }
             // allow events to percolate
-            pause(1);
+           // pause(1);
 
             // activate current behavior
             this._behaviors[i].active = true;
-            control.runInParallel(() => this._behaviors[i].run())
+            //control.runInParallel(() => this._behaviors[i].run())
         }
     }
 
