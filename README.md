@@ -1,4 +1,4 @@
-# Automation [![Build Status](https://travis-ci.org/janlindblom/pxt-automation.svg?branch=master)](https://travis-ci.org/janlindblom/pxt-automation)
+# Automation [![Build Status](https://travis-ci.org/janlindblom/pxt-microbit-automation.svg?branch=master)](https://travis-ci.org/janlindblom/pxt-microbit-automation)
 
 Various algorithm for Systems & Control operations for Microsoft MakeCode editors.
 
