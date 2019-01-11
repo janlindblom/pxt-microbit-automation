@@ -1,4 +1,4 @@
-# Automation [![Build Status](https://travis-ci.org/Microsoft/pxt-automation.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-automation)
+# Automation [![Build Status](https://travis-ci.org/janlindblom/pxt-automation.svg?branch=master)](https://travis-ci.org/janlindblom/pxt-automation)
 
 Various algorithm for Systems & Control operations for Microsoft MakeCode editors.
 
@@ -24,7 +24,7 @@ for (let i = 0; i < 10; ++i) {
 
 ## Behaviors
 
-An example of Behavior-based robotics control system. 
+An example of Behavior-based robotics control system.
 
 ## Moving Average Filter
 
@@ -37,10 +37,7 @@ for (let i = 0; i < 10; ++i) {
 
 ## Supported targets
 
-* for PXT/maker
-* for PXT/adafruit
-* for PXT/codal
-* for PXT/ev3
+* for PXT/microbit
 
 ## License
 
