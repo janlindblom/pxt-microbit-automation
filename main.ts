@@ -217,9 +217,11 @@ namespace automation {
     export const pid1 = new PIDController();
 
     //% fixedInstance
+    //% blockCombine
     export const pid2 = new PIDController();
 
     //% fixedInstance
+    //% blockCombine
     export const pid3 = new PIDController();
 
     //% fixedInstance
