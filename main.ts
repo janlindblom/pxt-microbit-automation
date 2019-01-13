@@ -100,6 +100,7 @@ namespace automation {
          * @param kd derivative gain
          * @param b setpoint weight, eg: 0.9
          */
+        //% block
         //% blockId=pidSetGains block="set %pid|gains kp %kp|ki %ki|kd %kd"
         //% group=PID
         //% inlineInputMode=inline
@@ -125,6 +126,7 @@ namespace automation {
          * @param low lowest control value, eg: -100
          * @param high highest control value, eg: 100
          */
+        //% block
         //% blockId=pidSetSaturation block="set %pid|control saturation from %low|to %high"        
         setControlSaturation(low: number, high: number) {
             this.ulow = low;
@@ -135,6 +137,7 @@ namespace automation {
          * Sets the derivative filter gain
          * @param N the filter gain, eg:10
          */
+        //% block
         //% blockId=pidSetDerivativeFilter block="set %pid|derivative filter %N"
         //% N.min=2 N.max=20
         //% group=PID
@@ -146,6 +149,7 @@ namespace automation {
          * Updates the desired setpoint
          * @param ysp 
          */
+        //% block
         //% blockId=pidSetPoint block="set %pid|point to %ysp"
         setPoint(ysp: number) {
             this.ysp = ysp;
@@ -154,6 +158,7 @@ namespace automation {
         /**
          * Computes the output based on the system state
          */
+        //% block
         //% blockId=pidCompute block="%pid|compute for timestep %timestep|(ms) at state %y"
         //% group=PID
         //% weight=100
