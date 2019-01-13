@@ -3,6 +3,7 @@
  */
 //% groups="['PID', `Filters', 'Behaviors']"
 //% color=0x909090 weight=80 icon="\uf277"
+//% block="Automation"
 namespace automation {
     /**
      * A PID controller.
