@@ -3,7 +3,6 @@
  */
 //% groups="['PID', `Filters', 'Behaviors']"
 //% color=#909090 weight=80 icon="\uf277"
-//% block="Automation"
 namespace automation {
     /**
      * A PID controller.
@@ -106,6 +105,7 @@ namespace automation {
         //% group=PID
         //% inlineInputMode=inline
         //% weight=99
+        //% b.min=0 b.max=1.0
         setGains(kp: number, ki: number, kd: number, b: number = 1) {
             kp = Math.max(0, kp);
             ki = Math.max(0, ki);
@@ -217,11 +217,9 @@ namespace automation {
     export const pid1 = new PIDController();
 
     //% fixedInstance
-    //% blockCombine
     export const pid2 = new PIDController();
 
     //% fixedInstance
-    //% blockCombine
     export const pid3 = new PIDController();
 
     //% fixedInstance
